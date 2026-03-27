@@ -253,7 +253,7 @@ flex-wrap: wrap;
 .fun-strip {
   position: relative;
   width: 100%;
-  max-width: 700px;
+  max-width: 680px;
   overflow: hidden;
   margin-bottom: 24px;
   padding: 10px 0;
@@ -265,35 +265,30 @@ flex-wrap: wrap;
     0 0 14px rgba(255, 230, 109, 0.03);
 }
 
-.fun-strip::before,
 .fun-strip::after {
   content: "";
   position: absolute;
   top: 0;
-  width: 24px;
+  right: 0;
+  width: 36px;
   height: 100%;
   z-index: 2;
   pointer-events: none;
-}
-
-.fun-strip::before {
-  left: 0;
-  background: linear-gradient(to right, rgba(13, 15, 28, 0.85), rgba(13, 15, 28, 0));
-}
-
-.fun-strip::after {
-  right: 0;
-  background: linear-gradient(to left, rgba(13, 15, 28, 0.85), rgba(13, 15, 28, 0));
+  background: linear-gradient(to left, rgba(13, 15, 28, 1), rgba(13, 15, 28, 0));
 }
 
 .fun-track {
   display: flex;
+  width: max-content;
+  animation: smoothTicker 14s linear infinite;
+}
+
+.fun-group {
+  display: flex;
   align-items: center;
   gap: 18px;
-  width: max-content;
-  padding-left: 22px;
-  padding-right: 22px;
-  animation: tickerMove 14s linear infinite;
+  padding-right: 18px;
+  flex-shrink: 0;
 }
 
 .ticker-text {
@@ -308,17 +303,18 @@ flex-wrap: wrap;
 
 .ticker-sep {
   font-family: "Oxanium", sans-serif;
-  font-size: 0.65rem;
-  color: rgba(255, 230, 109, 0.75);
-  flex-shrink: 0;
+  font-size: 0.68rem;
+  color: rgba(255, 230, 109, 0.8);
+  line-height: 1;
   transform: translateY(-1px);
+  flex-shrink: 0;
 }
 
-@keyframes tickerMove {
-  0% {
-    transform: translateX(-28%);
+@keyframes smoothTicker {
+  from {
+    transform: translateX(-50%);
   }
-  100% {
-    transform: translateX(-8%);
+  to {
+    transform: translateX(0);
   }
 }
