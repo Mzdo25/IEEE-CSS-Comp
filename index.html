@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>IEEE Arcade</title>
-  <link rel="stylesheet" href="style.css"> 
+  <link rel="stylesheet" href="style.css?v=2"> 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&family=Press+Start+2P&display=swap" rel="stylesheet">
@@ -29,11 +29,8 @@
   </div>
   <nav class="nav-links">
     <a href="#home">Home</a>
-    <a href="#about">About Us</a>
-    <a href="#activities">Activities</a>
-    <a href="#hall-of-fame">Hall of Fame</a>
-    <a href="#join-us">Join Us</a>
-    <a href="#timeline">Timeline</a>
+    <a href="activities.html">Activities</a>
+    <a href="join.html">Join Us</a>
   </nav>
 </header>
 
@@ -71,7 +68,7 @@
       </p>
 
       <div class="home-buttons">
-        <a href="#activities" class="cta-button">Explore Activities</a>
+        <a href="activities.html" class="cta-button">Explore Activities</a>
         <a href="#join-us" class="cta-button secondary-button">Join Us</a>
       </div>
 
@@ -94,11 +91,97 @@
     </div>
 
     <div class="home-right">
-      <div class="placeholder">
-        <span>ARCADE VISUAL<br>COMING SOON</span>
+      <div class="arcade-machine">
+        <!-- Marquee -->
+        <div class="am-marquee">ARCADE</div>
+        
+        <!-- Screen -->
+        <div class="am-screen-container">
+          <div class="am-screen">
+            <span class="am-screen-text">INSERT COIN</span>
+            <div class="am-scanlines"></div>
+          </div>
+        </div>
+        
+        <!-- Controls -->
+        <div class="am-control-panel">
+          <div class="am-joystick">
+            <div class="am-stick"></div>
+            <div class="am-stick-base"></div>
+          </div>
+          <div class="am-buttons">
+            <span class="am-btn btn-a"></span>
+            <span class="am-btn btn-b"></span>
+          </div>
+        </div>
+
+        <!-- Coin Slot -->
+        <div class="am-coin-door">
+          <div class="am-slot"></div>
+          <p class="am-coin-text">25¢</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
+
+<section class="home-section about-section">
+  <h2 class="join-title" style="font-family: 'Press Start 2P', cursive; font-size: 1.2rem; color: #4de2e6; margin-bottom: 20px;">Why This Idea Wins</h2>
+  <p class="message">
+    We made this arcade for you! Because everyone deserves a night of games, giggles, and friendly challenges. 
+    Neon lights, retro feels, and classic arcade fun make it impossible not to smile. Grab a friend and join the fun!
+  </p>
+  <div class="home-buttons">
+    <a href="join.html" class="cta-button">Reserve a Spot</a>
+  </div>
+</section>
+
+<!-- NEW HALL OF FAME SECTION -->
+<section id="hall-of-fame" class="home-section">
+  <div class="content-wrapper" style="text-align: center;">
+    <h2 class="section-title">Hall of Fame</h2>
+    <p class="section-desc" style="max-width: 600px; margin: 0 auto 40px auto;">
+      The legends who have immortalized their initials on our arcade cabinets.
+    </p>
+
+    <div class="hof-grid">
+      <!-- Rank 1 -->
+      <div class="hof-card rank-1">
+        <div class="hof-rank">1ST</div>
+        <div class="hof-details">
+          <h3 class="hof-initials">AAA</h3>
+          <p class="hof-score">9,999,990</p>
+          <span class="hof-game">Pac-Man</span>
+        </div>
+      </div>
+      
+      <!-- Rank 2 -->
+      <div class="hof-card rank-2">
+        <div class="hof-rank">2ND</div>
+        <div class="hof-details">
+          <h3 class="hof-initials">SHD</h3>
+          <p class="hof-score">8,542,100</p>
+          <span class="hof-game">Space Invaders</span>
+        </div>
+      </div>
+
+      <!-- Rank 3 -->
+      <div class="hof-card rank-3">
+        <div class="hof-rank">3RD</div>
+        <div class="hof-details">
+          <h3 class="hof-initials">MOH</h3>
+          <p class="hof-score">7,120,500</p>
+          <span class="hof-game">Tetris</span>
+        </div>
+      </div>
+    </div>
+    <div class="hof-base"></div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <p>© 2026 IEEE Retro Arcade — Simple &amp; fun for you by Shahd &amp; Mohamed 🌟</p>
+</footer>
+
 </body>
 </html>

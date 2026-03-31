@@ -1,0 +1,161 @@
+:root {
+  --neon-purple: #bf00ff;
+  --neon-blue: #00f0ff;
+  --neon-green: #39ff14;
+  --neon-yellow: #ffff33;
+  --neon-pink: #ff69b4;
+  --neon-cyan: #00ffff;
+  --bg: #111;
+  --text: #eee;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  margin: 0;
+  padding: 0;
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: var(--neon-purple);
+  color: white;
+}
+
+.site-header .brand {
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.3rem;
+  color: white;
+}
+
+.site-header nav a {
+  margin-left: 1rem;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+
+.site-header nav a:hover {
+  text-decoration: underline;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  margin: 0.5rem 0;
+  border-radius: 6px;
+  background: var(--neon-blue);
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: var(--neon-green);
+}
+
+.btn.ghost {
+  background: transparent;
+  border: 2px solid var(--neon-blue);
+  color: var(--neon-blue);
+}
+
+.btn.ghost:hover {
+  background: var(--neon-blue);
+  color: white;
+}
+
+.hero {
+  text-align: center;
+  padding: 4rem 1rem;
+  background: linear-gradient(135deg, var(--neon-purple), var(--neon-blue));
+  color: white;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
+
+.about {
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.about h2 {
+  color: var(--neon-purple);
+  margin-bottom: 1rem;
+}
+
+.about p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.rules-page, .reserve-page {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #222;
+  border-radius: 12px;
+  box-shadow: 0 0 20px var(--neon-cyan);
+  color: var(--text);
+}
+
+.rules-page h2, .reserve-page h2 {
+  color: var(--neon-blue);
+  margin-bottom: 1rem;
+}
+
+.rules-page ul {
+  padding-left: 1.2rem;
+}
+
+.rules-page ul li {
+  margin-bottom: 0.8rem;
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background: var(--neon-purple);
+  color: white;
+  font-size: 0.9rem;
+}
+
+.hero-actions {
+  margin-top: 1.5rem;
+}
+
+.reserve-info p {
+  margin: 0.5rem 0;
+  font-weight: bold;
+}
+
+@media(max-width:768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .site-header {
+    flex-direction: column;
+  }
+
+  .site-header nav a {
+    margin: 0.3rem 0;
+  }
+}
