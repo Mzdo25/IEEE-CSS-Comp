@@ -1,3 +1,12 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
 body {
   margin: 0;
   background: linear-gradient(135deg, #050508 0%, #0e0914 30%, #060e15 70%, #08080f 100%);
@@ -6,6 +15,7 @@ body {
   color: white;
   font-family: "Oxanium", sans-serif;
   overflow-x: hidden; 
+  width: 100%;
 }
 
 @keyframes bgPulse {
@@ -13,7 +23,6 @@ body {
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
-
 
 body::before {
   content: "";
@@ -980,9 +989,7 @@ flex-wrap: wrap;
   color: #aab0d6;
 }
 
-/* ── MOBILE RESPONSIVENESS ── */
 @media (max-width: 768px) {
-  /* Navbar */
   .navbar {
     padding: 10px 16px;
     flex-wrap: wrap;
@@ -1001,31 +1008,43 @@ flex-wrap: wrap;
     font-size: 0.85rem;
   }
 
-  /* Structural Content */
   .home-section {
-    padding: 40px 20px;
+    padding: 30px 15px;
   }
   .home-content {
     flex-direction: column;
     text-align: center;
-    gap: 40px;
+    gap: 30px;
   }
   .home-left, .home-right {
     flex: 1 1 100%;
+  }
+  .home-left h1 {
+    font-size: clamp(1.2rem, 6vw, 2.2rem);
+    word-break: break-word;
   }
   .home-buttons {
     justify-content: center;
   }
   .stats {
-    grid-template-columns: 1fr;
-    max-width: 240px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    max-width: 100%;
     margin: 0 auto;
+  }
+  .box {
+    padding: 12px 6px;
+  }
+  .number {
+    font-size: 0.45rem;
+  }
+  .label {
+    font-size: 0.75rem;
   }
   .reserve-info {
     max-width: 100%;
   }
   
-  /* Machine */
   .arcade-machine {
     max-width: 320px;
   }
@@ -1033,7 +1052,6 @@ flex-wrap: wrap;
     padding: 16px 20px;
   }
   
-  /* Hall of Fame Podium -> Mobile Leaderboard */
   .hof-grid {
     flex-direction: column;
     align-items: center;
@@ -1057,7 +1075,6 @@ flex-wrap: wrap;
   .rank-1 .hof-initials { font-size: 2rem; }
   .rank-1 .hof-rank { font-size: 1.5rem; margin-bottom: 5px; }
 
-  /* Timeline */
   .simple-timeline::before {
     left: 21px; 
   }
