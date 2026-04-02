@@ -5,7 +5,7 @@ body {
   animation: bgPulse 15s ease infinite alternate;
   color: white;
   font-family: "Oxanium", sans-serif;
-  overflow-x: hidden; /* Avoid perspective scrolling overflow */
+  overflow-x: hidden; 
 }
 
 @keyframes bgPulse {
@@ -14,7 +14,7 @@ body {
   100% { background-position: 0% 50%; }
 }
 
-/* ── 3D RETRO ANIMATED GRID (SYNTHWAVE) ── */
+
 body::before {
   content: "";
   position: fixed;
@@ -31,7 +31,7 @@ body::before {
   transform-origin: top center;
   animation: gridMove 2s linear infinite;
   pointer-events: none;
-  /* Fade out at the horizon */
+  
   mask-image: linear-gradient(to bottom, transparent 0%, black 70%);
   -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 70%);
 }
@@ -41,7 +41,7 @@ body::before {
   100% { transform: perspective(400px) rotateX(75deg) translateY(60px); }
 }
 
-/* ── PULSING NEON AURA ── */
+
 body::after {
   content: "";
   position: fixed;
@@ -49,7 +49,7 @@ body::after {
   transform: translate(-50%, -50%);
   width: 150vw; height: 150vh;
   z-index: -3;
-  /* Complex multi-stop glowing aura with very low opacity */
+  
   background: radial-gradient(circle at center, rgba(77, 226, 230, 0.04) 0%, rgba(255, 95, 162, 0.02) 40%, transparent 60%);
   animation: pulseGlow 5s ease-in-out infinite alternate;
   pointer-events: none;
@@ -289,7 +289,7 @@ flex-wrap: wrap;
 
 
 
-/* ── ARCADE MACHINE (Refined Minimal) ──────────────────────────── */
+
 .arcade-machine {
   width: 100%;
   max-width: 400px;
@@ -517,7 +517,7 @@ flex-wrap: wrap;
   }
 }
 
-/* ── JOIN PAGE ───────────────────────────────── */
+
 .join-title {
   font-family: "Press Start 2P", cursive;
   font-size: clamp(1.2rem, 3vw, 2rem);
@@ -607,7 +607,7 @@ flex-wrap: wrap;
   color: #4de2e6;
 }
 
-/* ── ACTIVITIES BENTO BOX ──────────────────────────── */
+
 .activities-bento {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -648,7 +648,7 @@ flex-wrap: wrap;
   grid-row: span 2;
 }
 
-/* Feature cards get special glows */
+
 .bento-feature-1 {
   background: linear-gradient(135deg, rgba(255, 95, 162, 0.1), rgba(0,0,0,0));
   border: 1px solid rgba(255, 95, 162, 0.2);
@@ -661,7 +661,7 @@ flex-wrap: wrap;
 .activity-icon {
   font-size: 2.5rem;
   line-height: 1;
-  margin-bottom: 8px; /* Standardize the gap */
+  margin-bottom: 8px; 
 }
 
 .activity-name {
@@ -669,7 +669,7 @@ flex-wrap: wrap;
   font-size: 0.6rem;
   color: #fff;
   line-height: 1.6;
-  margin: 0; /* Reset native browser h3 top/bottom margin */
+  margin: 0; 
 }
 
 .bento-feature-1 .activity-name { color: #ff5fa2; text-shadow: 0 0 10px rgba(255,95,162,0.4); }
@@ -680,10 +680,10 @@ flex-wrap: wrap;
   font-size: 0.95rem;
   line-height: 1.6;
   color: #aab0d6;
-  margin: 0; /* Reset native browser paragraph top/bottom margin */
+  margin: 0; 
 }
 
-/* ── GAMES POSTER GRID ──────────────────────────── */
+
 .games-poster-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -769,7 +769,7 @@ flex-wrap: wrap;
   .bento-tall, .poster-large { grid-row: span 1; }
 }
 
-/* ── FOOTER ──────────────────────────────────── */
+
 .site-footer {
   width: min(1200px, calc(100% - 48px));
   margin: 40px auto 30px;
@@ -784,7 +784,7 @@ flex-wrap: wrap;
   color: #6b719a;
 }
 
-/* ── HALL OF FAME ──────────────────────────── */
+
 #hall-of-fame {
   padding-bottom: 80px;
 }
@@ -792,7 +792,7 @@ flex-wrap: wrap;
 .hof-grid {
   display: flex;
   justify-content: center;
-  align-items: flex-end; /* Align to the floor of the podium */
+  align-items: flex-end; 
   gap: 0;
   margin-top: 40px;
 }
@@ -820,14 +820,14 @@ flex-wrap: wrap;
   box-shadow: 0 0 40px rgba(255, 230, 109, 0.1), 0 20px 40px rgba(0,0,0,0.8);
   border-radius: 12px 12px 0 0;
   z-index: 3;
-  height: 380px; /* Physically towering */
+  height: 380px; 
 }
 .rank-1 .hof-rank { color: #ffe66d; text-shadow: 0 0 15px rgba(255, 230, 109, 0.6); font-size: 2.2rem; margin-bottom: 15px; }
 .rank-1 .hof-initials { font-size: 2.6rem; color: #ffe66d; text-shadow: 0 0 15px rgba(255, 230, 109, 0.3); }
 
 .rank-2 {
   order: 1;
-  border-top: 6px solid #c0c0c0; /* Silver */
+  border-top: 6px solid #c0c0c0; 
   border-radius: 12px 0 0 0;
   border-right: none;
   z-index: 2;
@@ -838,7 +838,7 @@ flex-wrap: wrap;
 
 .rank-3 {
   order: 3;
-  border-top: 6px solid #cd7f32; /* Bronze */
+  border-top: 6px solid #cd7f32; 
   border-radius: 0 12px 0 0;
   border-left: none;
   z-index: 1;
@@ -859,7 +859,7 @@ flex-wrap: wrap;
   box-shadow: 0 20px 40px rgba(0,0,0,0.8), inset 0 10px 20px rgba(0,0,0,0.6);
 }
 
-/* Podium Details */
+
 .hof-details {
   display: flex;
   flex-direction: column;
@@ -890,7 +890,7 @@ flex-wrap: wrap;
   letter-spacing: 2px;
 }
 
-/* ── SIMPLE TIMELINE ──────────────────────────── */
+
 .timeline-section {
   position: relative;
   overflow: hidden;
@@ -909,7 +909,7 @@ flex-wrap: wrap;
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 31px; /* Center of the marker */
+  left: 31px; 
   width: 2px;
   background: rgba(255, 255, 255, 0.1);
   z-index: 1;
@@ -978,4 +978,98 @@ flex-wrap: wrap;
   font-size: 0.95rem;
   line-height: 1.6;
   color: #aab0d6;
+}
+
+/* ── MOBILE RESPONSIVENESS ── */
+@media (max-width: 768px) {
+  /* Navbar */
+  .navbar {
+    padding: 10px 16px;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+  }
+  .logo-text-sub {
+    display: none; 
+  }
+  .nav-links {
+    gap: 15px;
+    width: 100%;
+    justify-content: center;
+  }
+  .nav-links a {
+    font-size: 0.85rem;
+  }
+
+  /* Structural Content */
+  .home-section {
+    padding: 40px 20px;
+  }
+  .home-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+  .home-left, .home-right {
+    flex: 1 1 100%;
+  }
+  .home-buttons {
+    justify-content: center;
+  }
+  .stats {
+    grid-template-columns: 1fr;
+    max-width: 240px;
+    margin: 0 auto;
+  }
+  .reserve-info {
+    max-width: 100%;
+  }
+  
+  /* Machine */
+  .arcade-machine {
+    max-width: 320px;
+  }
+  .am-control-panel {
+    padding: 16px 20px;
+  }
+  
+  /* Hall of Fame Podium -> Mobile Leaderboard */
+  .hof-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  .hof-card {
+    width: 100%;
+    max-width: 100%;
+    height: auto !important;
+    border-radius: 16px !important;
+    border: 1px solid #232840 !important;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5) !important;
+    padding: 24px;
+  }
+  .rank-1 { order: 1; border-top: 4px solid #ffe66d !important; }
+  .rank-2 { order: 2; border-top: 4px solid #c0c0c0 !important; }
+  .rank-3 { order: 3; border-top: 4px solid #cd7f32 !important; }
+  .hof-base {
+    display: none; 
+  }
+  .rank-1 .hof-initials { font-size: 2rem; }
+  .rank-1 .hof-rank { font-size: 1.5rem; margin-bottom: 5px; }
+
+  /* Timeline */
+  .simple-timeline::before {
+    left: 21px; 
+  }
+  .timeline-marker {
+    margin-left: 11px;
+    width: 16px; 
+    height: 16px;
+  }
+  .timeline-item {
+    gap: 15px;
+  }
+  .timeline-card {
+    padding: 20px 16px;
+  }
 }
