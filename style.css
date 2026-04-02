@@ -1020,8 +1020,10 @@ flex-wrap: wrap;
     flex: 1 1 100%;
   }
   .home-left h1 {
-    font-size: clamp(1.2rem, 6vw, 2.2rem);
-    word-break: break-word;
+    font-size: clamp(0.9rem, 4.5vw, 1.8rem);
+    white-space: normal !important;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
   }
   .home-buttons {
     justify-content: center;
